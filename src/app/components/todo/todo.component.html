@@ -1,0 +1,24 @@
+<table id="customers">
+    <tr>
+       <th>タイトル</th>
+       <th>本文</th>
+       <th>ステータス</th>
+       <th>カテゴリ</th>
+       <th>操作</th>
+    </tr>
+    <tr *ngFor="let t of todolist">
+        <td>{{t.title}}</td>
+        <td>{{t.body}}</td>
+        <td>{{t.state}}</td>
+        <td>{{t.category}}</td>
+        <td>
+            <a href="/editTodo/@todo.id">更新</a> |
+            <a href="/deleteTodo/@todo.id">削除</a>
+        </td>
+    </tr>
+</table> 
+ 
+<br/>
+<a [routerLink]="['/addTodo']" routerLinkActive="router-link-active"  style="float: right;">Todoを追加する</a> 
+   
+ 

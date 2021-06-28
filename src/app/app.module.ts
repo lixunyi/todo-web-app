@@ -3,16 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { CategoryComponent } from './components/category/category.component';
+import { CategoryEditComponent } from './components/category/category-edit/category-edit.component';
+import { TodoEditComponent } from './components/todo/todo-edit/todo-edit.component';
+import { HomeComponent } from './components/home/home.component';
+
+import { TodoApiClientService } from './services/api/todo-api-client.service';
+import { TodoAddComponent } from './components/todo/todo-add/todo-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoComponent,
+    CategoryComponent,
+    CategoryEditComponent,
+    TodoEditComponent,
+    HomeComponent,
+    TodoAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodoApiClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
