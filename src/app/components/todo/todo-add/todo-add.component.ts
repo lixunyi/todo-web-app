@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/model/category';
+import { Todo } from 'src/app/model/todo';
+import { CategoryApiClientService } from 'src/app/services/api/category-api-client.service';
 
 @Component({
   selector: 'app-todo-add',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoAddComponent implements OnInit {
 
-  constructor() { }
+  	public categorylist: Category[] = [];
+  	public todoForm : Todo = new Todo("","","","",new Category("0","未選択","",""));
 
-  ngOnInit(): void {
-  }
+	constructor(private categoryApi : CategoryApiClientService) { 
+		this.categorylist = categoryApi.getAll();
+	}
 
+	ngOnInit(): void {
+	}
+
+	doSubmit(){
+		console.log(111);
+	}
 }

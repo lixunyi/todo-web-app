@@ -11,6 +11,10 @@ import { HomeComponent } from './components/home/home.component';
 
 import { TodoApiClientService } from './services/api/todo-api-client.service';
 import { TodoAddComponent } from './components/todo/todo-add/todo-add.component';
+import { FormsModule } from '@angular/forms';
+import { TodoDeleteComponent } from './components/todo/todo-delete/todo-delete.component';
+import { CategoryDeleteComponent } from './components/category/category-delete/category-delete.component';
+import { CategoryAddComponent } from './components/category/category-add/category-add.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +24,15 @@ import { TodoAddComponent } from './components/todo/todo-add/todo-add.component'
     CategoryEditComponent,
     TodoEditComponent,
     HomeComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    TodoDeleteComponent,
+    CategoryDeleteComponent,
+    CategoryAddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [TodoApiClientService],
   bootstrap: [AppComponent]

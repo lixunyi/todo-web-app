@@ -1,1 +1,26 @@
-<p>todo-add works!</p>
+<h1>Add Todo</h1>
+
+<div>
+  <form>
+    <label for="title">タイトル</label>
+    <input type="text" id="title" name="title" placeholder="Todo title.." [(ngModel)]="todoForm.title">
+
+    <label for="body">内容</label>
+    <textarea id="body" name="body" placeholder="Todo content.." [(ngModel)]="todoForm.body"></textarea>
+
+    <label for="category">カテゴリ</label>
+
+    <select id="category" name="category" [(ngModel)]="todoForm.category.id">
+		<option [value]="'0'">未選択</option>
+    	<option [value]="item.id" *ngFor="let item of categorylist">{{item.name}}</option>
+    </select>
+    
+    <input type="submit" value="Submit" (click) = "doSubmit()">
+  </form>
+</div>
+
+<pre>
+
+	{{todoForm | json}}
+</pre>
+
