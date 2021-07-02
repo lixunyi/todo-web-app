@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoDeleteComponent } from './components/todo/todo-delete/todo-delete.component';
 import { CategoryDeleteComponent } from './components/category/category-delete/category-delete.component';
 import { CategoryAddComponent } from './components/category/category-add/category-add.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CategoryAddComponent } from './components/category/category-add/categor
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [TodoApiClientService],
   bootstrap: [AppComponent]

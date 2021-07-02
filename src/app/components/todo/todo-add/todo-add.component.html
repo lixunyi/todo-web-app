@@ -10,7 +10,7 @@
 
     <label for="category">カテゴリ</label>
 
-    <select id="category" name="category" [(ngModel)]="todoForm.category.id">
+    <select id="category" name="category_id" [(ngModel)]="todoForm.category_id">
 		<option [value]="'0'">未選択</option>
     	<option [value]="item.id" *ngFor="let item of categorylist">{{item.name}}</option>
     </select>

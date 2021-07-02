@@ -7,3 +7,9 @@ export class Todo{
         public state:String,
         public category:Category){}
 }
+
+export class TodoForm{
+    constructor(public title:String,
+        public body:String,
+        public category_id:String){}
+}
